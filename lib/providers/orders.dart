@@ -22,6 +22,7 @@ class Orders with ChangeNotifier {
   }
 
   void addOrders(List<WcartItem> cartProducts,double total){
-      //_orders.insert(0, OrderItem(id: DateTime.now().toString(), amount: amount, products: products, dateTime: dateTime))
+      _orders.insert(0, OrderItem(id: DateTime.now().toString(), amount: total, products: cartProducts, dateTime: DateTime.now()));
+      notifyListeners();
   }
 }

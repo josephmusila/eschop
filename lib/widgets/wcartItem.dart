@@ -24,6 +24,22 @@ class WcartItem extends StatelessWidget {
         padding: EdgeInsets.only(right: 20),
         margin: EdgeInsets.symmetric(horizontal: 15, vertical: 4) ,
       ),
+      confirmDismiss: (direction){
+       return showDialog(context: context,
+            builder: (cotext)=>AlertDialog(
+              title: Text("Are you Sure"),
+              content: Text("Do you want to remove item from the cart"),
+              actions: [
+                 TextButton(onPressed: (){
+                   Navigator.of(context).pop(false);
+                 }, child: Text("No ")),
+                TextButton(onPressed: (){
+                  Navigator.of(context).pop(true);
+                }, child: Text("Yes "))
+              ],
+            ));
+
+      },
       direction:DismissDirection.endToStart,
       onDismissed: (direction){
         Provider.of<Cart>(context,listen: false).removeItem(productId);
