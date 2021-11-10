@@ -41,7 +41,7 @@ class ProvideProducts with ChangeNotifier {
       description: 'Quench your thirst',
       price: 50.00,
       imageUrl:
-      'https://res.cloudinary.com/dyc0ieeyu/image/upload/c_fit/v1/products/fanta-orange-500ml.jpg',
+          'https://res.cloudinary.com/dyc0ieeyu/image/upload/c_fit/v1/products/fanta-orange-500ml.jpg',
     ),
     Product(
       id: 'p7',
@@ -49,7 +49,7 @@ class ProvideProducts with ChangeNotifier {
       description: 'Fresh from the Farm',
       price: 30.21,
       imageUrl:
-      'https://thumbs.dreamstime.com/z/set-fresh-vegetables-fruits-bright-beautiful-backgroun-set-fresh-vegetables-fruits-bright-beautiful-background-115738555.jpg',
+          'https://thumbs.dreamstime.com/z/set-fresh-vegetables-fruits-bright-beautiful-backgroun-set-fresh-vegetables-fruits-bright-beautiful-background-115738555.jpg',
     ),
     Product(
       id: 'p8',
@@ -57,32 +57,142 @@ class ProvideProducts with ChangeNotifier {
       description: 'go wherever you want',
       price: 790.99,
       imageUrl:
-      'https://thumbs.dreamstime.com/z/retro-bicycles-bikes-29277055.jpg',
+          'https://thumbs.dreamstime.com/z/retro-bicycles-bikes-29277055.jpg',
+    ),
+    Product(
+      id: 'p8',
+      title: 'Bikes',
+      description: 'go wherever you want',
+      price: 790.99,
+      imageUrl:
+          'https://thumbs.dreamstime.com/z/retro-bicycles-bikes-29277055.jpg',
+    ),
+    Product(
+      id: 'p8',
+      title: 'Bikes',
+      description: 'go wherever you want',
+      price: 790.99,
+      imageUrl:
+          'https://thumbs.dreamstime.com/z/retro-bicycles-bikes-29277055.jpg',
+    ),
+    Product(
+      id: 'p8',
+      title: 'Bikes',
+      description: 'go wherever you want',
+      price: 790.99,
+      imageUrl:
+          'https://thumbs.dreamstime.com/z/retro-bicycles-bikes-29277055.jpg',
+    ),
+    Product(
+      id: 'p8',
+      title: 'Bikes',
+      description: 'go wherever you want',
+      price: 790.99,
+      imageUrl:
+          'https://thumbs.dreamstime.com/z/retro-bicycles-bikes-29277055.jpg',
+    ),
+    Product(
+      id: 'p8',
+      title: 'Bikes',
+      description: 'go wherever you want',
+      price: 790.99,
+      imageUrl:
+          'https://thumbs.dreamstime.com/z/retro-bicycles-bikes-29277055.jpg',
+    ),
+    Product(
+      id: 'p8',
+      title: 'Bikes',
+      description: 'go wherever you want',
+      price: 790.99,
+      imageUrl:
+          'https://thumbs.dreamstime.com/z/retro-bicycles-bikes-29277055.jpg',
+    ),
+    Product(
+      id: 'p8',
+      title: 'Bikes',
+      description: 'go wherever you want',
+      price: 790.99,
+      imageUrl:
+          'https://thumbs.dreamstime.com/z/retro-bicycles-bikes-29277055.jpg',
+    ),
+    Product(
+      id: 'p8',
+      title: 'Bikes',
+      description: 'go wherever you want',
+      price: 790.99,
+      imageUrl:
+          'https://thumbs.dreamstime.com/z/retro-bicycles-bikes-29277055.jpg',
+    ),
+    Product(
+      id: 'p8',
+      title: 'Bikes',
+      description: 'go wherever you want',
+      price: 790.99,
+      imageUrl:
+          'https://thumbs.dreamstime.com/z/retro-bicycles-bikes-29277055.jpg',
+    ),
+    Product(
+      id: 'p8',
+      title: 'Bikes',
+      description: 'go wherever you want',
+      price: 790.99,
+      imageUrl:
+          'https://thumbs.dreamstime.com/z/retro-bicycles-bikes-29277055.jpg',
+    ),
+    Product(
+      id: 'p8',
+      title: 'Bikes',
+      description: 'go wherever you want',
+      price: 790.99,
+      imageUrl:
+          'https://thumbs.dreamstime.com/z/retro-bicycles-bikes-29277055.jpg',
+    ),
+    Product(
+      id: 'p8',
+      title: 'Bikes',
+      description: 'go wherever you want',
+      price: 790.99,
+      imageUrl:
+          'https://thumbs.dreamstime.com/z/retro-bicycles-bikes-29277055.jpg',
+    ),
+    Product(
+      id: 'p8',
+      title: 'Bikes',
+      description: 'go wherever you want',
+      price: 790.99,
+      imageUrl:
+          'https://thumbs.dreamstime.com/z/retro-bicycles-bikes-29277055.jpg',
+    ),
+    Product(
+      id: 'p8',
+      title: 'Bikes',
+      description: 'go wherever you want',
+      price: 790.99,
+      imageUrl:
+          'https://thumbs.dreamstime.com/z/retro-bicycles-bikes-29277055.jpg',
     ),
     Product(
       id: 'p9',
       title: 'Beef',
       description: 'No preservatives added',
       price: 48.10,
-      imageUrl:
-      'https://thumbs.dreamstime.com/z/raw-meat-17630391.jpg',
+      imageUrl: 'https://thumbs.dreamstime.com/z/raw-meat-17630391.jpg',
     ),
   ];
 
-
-  List<Product> get favoriteItems{
+  List<Product> get favoriteItems {
     return _items.where((prodItem) => prodItem.isFavourite).toList();
   }
 
-
   //var showFavouritesOnly = false;
 
- List<Product> get items {
-   /* if (showFavouritesOnly) {
+  List<Product> get items {
+    /* if (showFavouritesOnly) {
       return _items.where((element) => element.isFavourite).toList();
     }*/
     return [..._items];
   }
+
   /*
   void showFavouritesMyOnly() {
     showFavouritesOnly = true;
@@ -93,13 +203,34 @@ class ProvideProducts with ChangeNotifier {
     showFavouritesOnly = false;
     notifyListeners();
   }*/
-void addProduct(Product product){
-  final newProduct=Product(id: DateTime.now().toString(), title: product.title, description: product.description, price: product.price, imageUrl: product.imageUrl);
-  _items.add(newProduct);
-  //_items.insert(0,newproduct); //at the start of the list
-  notifyListeners();
-}
+  void addProduct(Product product) {
+    final newProduct = Product(
+        id: DateTime.now().toString(),
+        title: product.title,
+        description: product.description,
+        price: product.price,
+        imageUrl: product.imageUrl);
+    _items.add(newProduct);
+    //_items.insert(0,newproduct); //at the start of the list
+    notifyListeners();
+  }
+
   Product findById(String id) {
     return _items.firstWhere((element) => element.id == id);
+  }
+
+  void updateProduct(String id, Product newProduct) {
+    final prodIndex = _items.indexWhere((element) => element.id == id);
+    if (prodIndex > 0) {
+      _items[prodIndex] = newProduct;
+      notifyListeners();
+    } else {
+      print("..........");
+    }
+  }
+
+  void deleteProduct(String id) {
+    _items.removeWhere((element) => element.id == id);
+    notifyListeners();
   }
 }
